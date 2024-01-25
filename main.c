@@ -1,59 +1,56 @@
-#include <stdio.h>
+#include<stdio.h>
 #include "NumClass.h"
 
-int main()
-{
-        int num1;
-        int num2;
-        int i;
-        // printf("give me two number:");
-        scanf("%d%d", &num1, &num2);
 
-        printf("The Armstrong numbers are:");
-        for (i = num1; i <= num2; i++)
+
+
+int main () {
+    
+    int x;
+    int y;
+
+
+   
+    scanf("%d  %d", &x ,&y);
+ 
+    
+    
+
+    printf("The Armstrong numbers are:");
+    for (int i = x; i <= y; i++)
+    {
+        if (isArmstrong(i))
         {
-
-                int a = isArmstrong(i);
-                if (a == true)
-                {
-                        printf(" %d", i);
-                }
+            printf(" %d", i);
         }
-
-        printf("\nThe Palindromes are:");
-        for (i = num1; i <= num2; i++)
+    }
+    
+    printf("\nThe Palindromes are:");
+    for (int i = x; i <= y; i++)
+    {
+        if (isPalindrome(i))
         {
-
-                int b = isPalindrome(i);
-                if (b == true)
-                {
-                        printf(" %d", i);
-                }
+            printf(" %d", i);
         }
-        printf("\nThe Prime numbers are:");
-        for (i = num1; i <= num2; i++)
-
+    }
+    printf("\nThe Prime numbers are:");
+    for (int i = x; i <= y; i++)
+    {
+        if (isPrime(i))
         {
-                int c = isPrime(i);
-
-                if (c == true)
-                {
-                        printf(" %d", i);
-                }
+            printf(" %d", i);
         }
-
-        printf("\nThe Strong numbers are:");
-        for (int i = num1; i <= num2; i++)
-
+    }
+    printf("\nThe Strong numbers are:");
+    for (int i = x; i <= y; i++)
+    {
+        if (isStrong(i))
         {
-                int d = isStrong(i);
-
-                if (d == true)
-                {
-                        printf(" %d", i);
-                }
+            printf(" %d", i);
         }
-        printf("\n");
-
-        return 0;
+    }
+    printf("\n");
+  
+   return 0;
 }
+
